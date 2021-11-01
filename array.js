@@ -126,4 +126,4 @@ const insertionSort = arr => {
         arr[j] = dn;
     }
     return arr;
-}; console.log(insertionSort(arr))
+}; console.log(insertionSort(arr));
