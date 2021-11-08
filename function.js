@@ -1,26 +1,30 @@
 4. 1.Получить строковое название дня недели по номеру дня.
 function getWeekDay (data) {
     switch (data) {
-        case 1: console.log('Monday'); break;
-        case 2: console.log('Tuesday'); break;
-        case 3: console.log('Wednesday'); break;
-        case 4: console.log('Thursday'); break;
-        case 5: console.log('Friday'); break;
-        case 6: console.log('Saturday'); break;
-        case 7: console.log('Sunday');break;
+        case 1: return ('Monday'); break;
+        case 2: return ('Tuesday'); break;
+        case 3: return ('Wednesday'); break;
+        case 4: return ('Thursday'); break;
+        case 5: return ('Friday'); break;
+        case 6: return ('Saturday'); break;
+        case 7: return ('Sunday');break;
         default: break;
     }
-}  getWeekDay(2)
+}
+console.log(getWeekDay(2))
+
 2/ Найти расстояние между двумя точками в двухмерном декартовом пространстве.
 function findDistance (x1,x2,y1,y2) {
         let result=Math.sqrt((x1-x2)**2+(y1-y2)**2);
     return Math.round(result);
-} console.log(findDistance(4,2,7,9))
+}
+console.log(findDistance(4,2,7,9))
+
 Вводим число(0-999), получаем строку с прописью числа.
-function whitNum(a) {
-    let hundreds=Math.trunc(a/100);
-    let dozens=(a%100/10);
-    let units=(a%10);
+function whitNum(num) {
+    let hundreds=Math.trunc(num/100);
+    let dozens=(num%100/10);
+    let units=(num%10);
     let strHundreds='';
     let strDozens='';
     let strUnits='';
@@ -81,7 +85,9 @@ function whitNum(a) {
         }
     }   let result= strHundreds+''+strDozens+strUnits
         return result;
-} console.log(whitNum(548))
+}
+console.log(whitNum(548))
+
 Вводим строку, которая содержит число, написанное прописью (0-999). Получить само число
 
 function receiveNum(a) {

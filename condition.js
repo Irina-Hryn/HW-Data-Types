@@ -1,82 +1,101 @@
-1. Если а – четное посчитать а*б, иначе а+б
-const a=3;
-const b=2;
-const c=a*b;
-const d=a+b;
-if (a%2==0) {
-    console.log(c);
-} else {
-    console.log(d);
+// 1. Если а – четное посчитать а*б, иначе а+б
+function sumNum(a,b) {
+    if (a%2==0) {
+        return a*b;
+    } else {
+        return a+b;
+    }
 }
+console.log(sumNum(6,6));
 
 2. Определить какой четверти принадлежит точка с координатами (х,у)
-const x=6;
-const y=5;
-switch (true) {
-    case (x>0&&y>0):
-        console.log('first Quarter');
-        break;
-    case (x<0&&y>0):
-        console.log('second Quarter');
-        break;
-    case (x<0&&y<0):
-        console.log('third Quarter');
-        break;
-    case (x>0&&y<0):
-        console.log('fourth Quarter');
-        break;
-    default:
-        break;
+function guarterNum(x,y) {
+ switch (true) {
+     case (x > 0 && y > 0):
+         return ('first Quarter');
+         break;
+     case (x < 0 && y > 0):
+         return ('second Quarter');
+         break;
+     case (x < 0 && y < 0):
+         return ('third Quarter');
+         break;
+     case (x > 0 && y < 0):
+         return ('fourth Quarter');
+         break;
+     default:
+         break;
+ }
 }
+console.log(guarterNum(6,6));
 
 3. Найти суммы только положительных из трех чисел
-const a=-1;
-const b=2;
-const c=10;
-let sum=0;
-switch (true) {
-    case (a>0):
-        sum+=a;
-    case (b>0):
-        sum+=b;
-    case (c>0):
-        sum+=c;
-    default:
+function sumPositive(a,b,c) {
+   let sum=0;
+    switch (true) {
+        case ( a>0 && b>0 && c>0):
+        sum = a+b+c;
         break;
-} console.log(sum);
+        case ( a<=0 && b>0 && c>0):
+        sum = b+c;
+        break;
+        case ( a>0 && b<=0 && c>0):
+        sum = a+c;
+        break;
+        case ( a>0 && b>0 && c<=0):
+        sum = a+b;
+        break;
+        case ( a>0 && b<=0 && c<=0):
+        sum = a;
+        break;
+        case ( a<=0 && b<=0 && c>0):
+        sum = c;
+        break;
+        case ( a<=0 && b>0 && c<=0):
+        sum = b;
+        break;
+        default:
+        break;
+    }
+    return sum;
+}
+console.log(sumPositive (3,-5,8));
 4. Посчитать выражение (макс(а*б*с, а+б+с))+3
-const a=1;
-const b=5;
-const c=2;
-const d=a+b+c;
-const e=a*b*c;
-if (d>e) {
-    console.log(d+3);
-} else if (d<e) {
-    console.log(e+3);
+function maxValue(a,b,c) {
+  const sumNum=a+b+c;
+  const multiplicationNum=a*b*c;
+  if (multiplicationNum>sumNum) {
+         return multiplicationNum+3;
+   } else if (multiplicationNum<sumNum) {
+      return sumNum + 3;
+  }
+}
+console.log(maxValue (3,5,2));
+
+// 5.Написать программу определения оценки студента по его рейтингу, на основе следующих правил
+function gradingStud(rating) {
+    let result = '';
+    switch (true) {
+        case (rating > 0 && rating < 20):
+            result = 'grade F';
+            break;
+        case (rating > 19 && rating < 40):
+            result = 'grade E';
+            break;
+        case (rating > 39 && rating < 60):
+            result = 'grade D';
+            break;
+        case (rating > 59 && rating < 75):
+            result = 'grade C';
+            break;
+        case (rating > 74 && rating < 90):
+            result = 'grade B';
+            break;
+        case (rating > 89 && rating < 101):
+            result = 'grade A';
+        default:
+            break;
+    } return  result;
 }
 
-// 5.Определить какой четверти принадлежит точка с координатами (х,у)
-const rating=100;
-switch (true) {
-    case (rating>0&&rating<20):
-        console.log('grade F');
-        break;
-    case (rating>19&&rating<40):
-        console.log('grade E');
-        break;
-    case (rating>39&&rating<60):
-        console.log('grade D');
-        break;
-    case (rating>59&&rating<75):
-        console.log('grade C');
-        break;
-    case (rating>74&&rating<90):
-        console.log('grade B');
-        break;
-    case (rating>89&&rating<101):
-        console.log('grade A');
-        break;
-    default:
-        break;
-}
+    console.log(gradingStud(80));

@@ -54,12 +54,15 @@ function SqRootSeq(a) {
 console.log(SqRootSeq(532))
 
 // 4. Вычислить факториал числа n. n! = 1*2*…*n-1*n;
-const inputNumber=5;
-let total = 1;
-for ( let i = 0; i<inputNumber; i++){
-    total = total * (inputNumber - i);
+function inputNumber(inpNumber) {
+   let total = 1;
+   for ( let i = 0; i<inpNumber; i++){
+    total = total * (inpNumber - i);
+   }
+    return total;
 }
-console.log(total);
+console.log(inputNumber(5))
+
 
 5. Посчитать сумму цифр заданного числа
 function digitSum(y) {
@@ -72,11 +75,13 @@ function digitSum(y) {
 
 
 6. Вывести число, которое является зеркальным отображением последовательности цифр заданного числа, например, задано число 123, вывести 321.
-let a=52;
-let b, sum=0;
-while(a > 0) {
-    b=a%10;
+function mirrorNum(value) {
+  let b, sum=0;
+  while(value > 0) {
+    b=value%10;
     sum=sum*10+b;
-    a = parseInt(a/10);
+    value = parseInt(value/10);
+  }
+  return sum;
 }
-console.log(sum);
+console.log(mirrorNum(52));
