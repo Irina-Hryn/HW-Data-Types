@@ -96,6 +96,6 @@ function gradingStud(rating) {
         default:
             break;
     } return  result;
-}
+};
 
     console.log(gradingStud(80));
