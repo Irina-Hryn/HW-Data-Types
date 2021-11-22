@@ -1,32 +1,47 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Mocha Tests</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css"/>
     <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet"/>
 </head>
 <body>
-<script>
-    function myFunction() {
-        document.getElementById('result').value = '5';
-    }
-</script>
+<div class="heading">
+    <h1> Linked List</h1>
+       <div class="input-block">
+           <input type=text class="value" placeholder='Value' name="value"/>
+           <input type=text class="position" placeholder='Position' name="position"/>
+           <input type=submit class="js-submit" value="Add"/>
+           <input type=submit class="js-find" value="Find"/>
+           <input type=submit class="findIndex" value="Find-Index"/>
+           <input type=submit class="filter" value="AddSome"/>
+           <input type=submit class="length" value="Length"/>
+           <input type=submit class="js-delete" value="Delete"/>
+           <input type=submit class="js-deleteLast" value="Delete-Last"/>
+       </div>
 
-<!--<h1 id="greeting"></h1>-->
-<!--<input id="result"/>-->
-<!--<button id="click-button" onclick="myFunction()">Add</button>-->
 
-<div id="mocha"></div>
-<div id="messages"></div>
-<div id="fixtures"></div>
-<script src="https://cdn.rawgit.com/Automattic/expect.js/0.3.1/index.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/2.2.2/faker.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.0.1/mocha.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/1.4.1/chai.js"></script>
-<script>mocha.setup('bdd')</script>
-<script src ="scr/eggs.js"></script>
-<script src="tests/eggs.spec.js"></script>
-<script>
-    mocha.run()
-</script>
+<div class="node-list"></div>
+
+    <div id="mocha"></div>
+    <div id="messages"></div>
+    <div id="fixtures"></div>
+    <script src="https://cdn.rawgit.com/Automattic/expect.js/0.3.1/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/2.2.2/faker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.0.1/mocha.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/1.4.1/chai.js"></script>
+    <script src="src/filejs/conctant.js"></script>
+    <script src="src/filejs/limked_list_kod.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="test.spec.js"></script>
+    <script src="tests/numberjs.spec.js"></script>
+    <script>
+        mocha.run();
+    </script>
 </body>
+
 </html>
+
