@@ -1,0 +1,31 @@
+{
+  "name": "asynchronous",
+  "version": "1.0.0",
+  "description": "Jest intro",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --watch"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "jest",
+    "unit",
+    "testing"
+  ],
+  "author": "Irina Grin",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "grunt-webpack": "^5.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.3.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {}
+}
