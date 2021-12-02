@@ -39,8 +39,7 @@ export class View {
               this.returnButton.remove()
               this.initRender();
               this.taskList.remove();
-              this.mainBlock.style.display = 'flex';
-      }
+ }
       removeTasks(target) {
               target.remove();
       }
